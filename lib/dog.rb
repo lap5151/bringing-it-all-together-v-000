@@ -46,7 +46,6 @@ attr_accessor :id, :name, :breed
 
   def self.create(hash)
     dog = Dog.new(hash)
-    binding.pry
     dog
   end
 
