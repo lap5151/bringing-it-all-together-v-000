@@ -1,6 +1,6 @@
 require 'pry'
 class Dog
-attr_accessor :id, :name, :breed
+#attr_accessor :id, :name, :breed
 
 
   def initialize(hash)
