@@ -13,7 +13,7 @@ attr_accessor :id, :name, :breed
     CREATE TABLE IF NOT EXISTS dogs
     SQL
 
-    DB[:conn].execute(sql)
+    DB = {:conn => SQLite3::Database.new("db/dogs.db")}.execute(sql)
   end
 
 
