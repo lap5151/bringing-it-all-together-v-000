@@ -64,6 +64,7 @@ attr_reader :id
       dog = Dog.new({:id=> result[0][0], :name=>result[0][1], :breed=>result[0][2]})
     else
       dog = self.create({:name=>self.name, :breed=>self.breed})
+      binding.pry
     end
     dog
   end
