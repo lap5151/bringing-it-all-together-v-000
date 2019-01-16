@@ -8,7 +8,7 @@ attr_accessor :id, :name, :breed
     @breed = hash[:breed]
   end
 
-  def create_table
+  def self.create_table
     sql =<<-SQL
     CREATE TABLE dogs
     SQL
