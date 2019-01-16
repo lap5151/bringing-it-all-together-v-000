@@ -69,7 +69,8 @@ attr_reader :id
   end
 
   def self.new_from_db(hash)
-    dog = Dog.new({:id=> hash[0], :name=>hash[1], :breed=>hash[2]})
+    #dog = Dog.new({:id=> hash[0], :name=>hash[1], :breed=>hash[2]})
+    dog = Dog.new(hash)
     dog
   end
 
