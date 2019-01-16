@@ -69,7 +69,8 @@ attr_reader :id
   end
 
   def self.new_from_db(hash)
-    binding.pry
+    dog = Dog.new({:id=> hash[0], :name=>hash[1], :breed=>hash[2]})
+    dog
   end
 
   def self.find_by_name(name)
