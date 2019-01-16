@@ -11,9 +11,9 @@ attr_accessor :id, :name, :breed
   def self.create_table
     sql =<<-SQL
     CREATE TABLE IF NOT EXISTS dogs(
-      id PRIMARY KEY INTEGER,
+      id INTEGER PRIMARY KEY,
       name TEXT,
-      breed TEXT
+      breed TEXT      
     )
     SQL
 
