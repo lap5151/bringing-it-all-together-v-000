@@ -43,8 +43,9 @@ attr_accessor :id, :name, :breed
       self
   end
 
-  def self.create
-
+  def self.create(hash)
+    dog = Dog.new(hash)
+    dog
   end
 
 
