@@ -60,7 +60,6 @@ attr_reader :id
 
   def self.find_or_create_by(hash)
     result = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name],hash[:breed])
-    binding.pry
     if !result.empty?
       dog = Dog.new({ :name=>result[0][1], :breed=>result[0][2]})
     else
