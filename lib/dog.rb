@@ -68,8 +68,8 @@ attr_reader :id
     dog
   end
 
-  def self.new_from_db
-
+  def self.new_from_db(hash)
+    binding.pry
   end
 
   def self.find_by_name(name)
