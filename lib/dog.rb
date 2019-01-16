@@ -54,6 +54,7 @@ attr_accessor :id, :name, :breed
     sql = "SELECT * FROM dogs WHERE id = ?"
     result = DB[:conn].execute(sql,id)
     dog = Dog.new(result)
+    dog
   end
 
 
