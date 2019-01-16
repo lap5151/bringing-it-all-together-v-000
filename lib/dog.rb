@@ -52,10 +52,11 @@ attr_accessor :id, :name, :breed
 
   def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
-    result = DB[:conn].execute(sql,id)
-    dog = Dog.new(:id=result[0][0])
+    result = DB[:conn].execute(sql,id)[0]
+    hash = {hash[:id]=>result[0], hash[:name]=>result[1], hash[:breed]=>result[2]}
+    dog = Dog.new(hash)
     #dog.id = result[0][0]
-    #dog
+    dog
     #binding.pry
   end
 
