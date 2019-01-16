@@ -50,7 +50,7 @@ attr_accessor :id, :name, :breed
     dog
   end
 
-  def self.find_by_id(hash)
+  def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
     result = DB[:conn].execute(sql,id)
     dog = Dog.new(result)
