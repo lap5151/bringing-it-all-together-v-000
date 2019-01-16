@@ -72,8 +72,12 @@ attr_reader :id
 
   end
 
-  def self.find_by_name
-
+  def self.find_by_name(hash)
+    sql = "SELECT * FROM dogs WHERE name = ? AND breed = ?"
+    result = DB[:conn].execute(sql,hash[:name],hash[:breed])
+    binding.pry
+    dog = Dog.new({:id=>result[0], :name=>result[1], :breed=>result[2]})
+    dog
   end
 
   def update
