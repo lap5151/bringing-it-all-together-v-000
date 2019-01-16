@@ -75,8 +75,7 @@ attr_reader :id
   def self.find_by_name(name)
     sql = "SELECT * FROM dogs WHERE name = ?"
     result = DB[:conn].execute(sql,name)
-    binding.pry
-    dog = Dog.new({:id=>result[0], :name=>result[1], :breed=>result[2]})
+    dog = Dog.new({:id=> result[0][0], :name=>result[0][1], :breed=>result[0][2]})
     dog
   end
 
