@@ -4,7 +4,7 @@ attr_accessor :name, :breed
 attr_reader :id
 
 
-  def initialize(id:,name:,breed:)
+  def initialize(hash)
     @id = hash[:id]
     @name = hash[:name]
     @breed = hash[:breed]
