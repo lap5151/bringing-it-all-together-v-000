@@ -32,7 +32,7 @@ attr_reader :id
 
   def save
     if self.id
-      #elf.update
+      #self.update
     else
       sql =<<-SQL
       INSERT INTO dogs (name,breed)
