@@ -56,7 +56,7 @@ attr_accessor :id, :name, :breed
     dog = Dog.new({:id=result[0][0]})
     #dog.id = result[0][0]
     #dog
-    binding.pry
+    #binding.pry
   end
 
 
