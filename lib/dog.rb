@@ -68,5 +68,9 @@ attr_reader :id
     dog
   end
 
+  def self.new_from_db
+    
+  end
+
 
 end
