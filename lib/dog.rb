@@ -13,7 +13,7 @@ attr_accessor :id, :name, :breed
     CREATE TABLE dogs
     SQL
 
-    DB[:conn].execute(sql)
+    #DB[:conn].execute(sql)
   end
 
 
