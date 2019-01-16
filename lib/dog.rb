@@ -30,7 +30,7 @@ attr_accessor :id, :name, :breed
 
   def save
     if self.id
-      self.update
+      #elf.update
     else
       sql =<<-SQL
       INSERT INTO dogs (name,breed)
