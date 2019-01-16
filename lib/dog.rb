@@ -63,7 +63,7 @@ attr_reader :id
     if !dog.empty?
       dog = Dog.new({:id=>result[0][0], :name=>result[0][1], :breed=>result[0][2]})
     else
-      dog = self.create(name: name, album :album)
+      dog = self.create({:name=>self.name, :breed=>self.breed})
     end
     dog
   end
