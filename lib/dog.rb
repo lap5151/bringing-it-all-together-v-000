@@ -65,6 +65,7 @@ attr_reader :id
     else
       dog = self.create(name: name, album :album)
     end
+    dog
   end
 
 
